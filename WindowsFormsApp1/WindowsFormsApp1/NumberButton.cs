@@ -18,8 +18,10 @@ namespace WindowsFormsApp1
         private int _y;
         
         private int _x;
+
+        private int _z;
         private Form1 _form1;
-        public  NumberButton(Form1 form1, Size size, Point location, string text,int x, int y)
+        public  NumberButton(Form1 form1, Size size, Point location, string text,int x, int y,int z)
         {
             _form1 = form1;
              Size = size;
@@ -27,6 +29,7 @@ namespace WindowsFormsApp1
             Text = text;
             _x = x;
             _y = y;
+            _z = z;
             Click += NumberButton_Click;
 
 
@@ -36,7 +39,8 @@ namespace WindowsFormsApp1
         {
             int num1;
             int num2;
-
+            num1 = _form1._numberArray[_x, _y]._z;
+            MessageBox.Show($"{num1}");
         }
     }
 }
