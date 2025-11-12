@@ -20,7 +20,10 @@ namespace WindowsFormsApp1
         private int _x;
 
         private int _z;
+
         private Form1 _form1;
+
+        private OperatorButton _operatorbutton;
         public  NumberButton(Form1 form1, Size size, Point location, string text,int x, int y,int z)
         {
             _form1 = form1;
@@ -37,10 +40,16 @@ namespace WindowsFormsApp1
 
         private void NumberButton_Click(object sender, EventArgs e)
         {
-            int num1;
-            int num2;
-            num1 = _form1._numberArray[_x, _y]._z;
-            MessageBox.Show($"{num1}");
+            int? num1 = null;
+            int? num2 = null;
+            if (num1 == null)
+            {
+                num1 = _form1._numberArray[_x, _y]._z;
+            }
+            else 
+            {
+                num2 = _form1._numberArray[_x, _y]._z;
+            }
         }
     }
 }

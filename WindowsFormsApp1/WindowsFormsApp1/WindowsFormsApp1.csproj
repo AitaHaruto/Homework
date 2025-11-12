@@ -55,7 +55,7 @@
     <Compile Include="NumberButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Operator.cs">
+    <Compile Include="OperatorButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
