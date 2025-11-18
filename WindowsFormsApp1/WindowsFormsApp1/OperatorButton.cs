@@ -67,6 +67,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        
         public void Operator_Click(object sender, EventArgs e)
         {
 

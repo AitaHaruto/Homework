@@ -53,8 +53,24 @@ namespace WindowsFormsApp1
             _operatorArray[4] = equal;
             Controls.Add(equal);
 
+            // クリアボタンの生成
+            Button clearButton = new Button();
+            clearButton.Size = new Size(100, 100);
+            clearButton.Location = new Point(0, 400); // 座標は好きな場所に
+            clearButton.Text = ".";
+            clearButton.Click += (s, e) =>
+            {
+                
+               
+            };
+
+            // フォームに追加
+            Controls.Add(clearButton);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
