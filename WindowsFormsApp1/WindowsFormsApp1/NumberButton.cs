@@ -10,10 +10,7 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public class NumberButton:Button
-    {
-      
-        
-        
+    { 
 
         private int _y;
         
@@ -38,7 +35,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void NumberButton_Click(object sender, EventArgs e)
+        public void NumberButton_Click(object sender, EventArgs e)
         {
             int? num1 = null;
             int? num2 = null;
@@ -50,6 +47,7 @@ namespace WindowsFormsApp1
             {
                 num2 = _form1._numberArray[_x, _y]._z;
             }
+            
         }
     }
 }
