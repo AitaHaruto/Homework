@@ -46,26 +46,11 @@ namespace WindowsFormsApp1
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
-            // クリアボタンの生成
-            Button clearButton = new Button();
-            clearButton.Size = new Size(100, 100);
-            clearButton.Location = new Point(0, 400); // 座標は好きな場所に
-            clearButton.Text = ".";
-            clearButton.Click += (s, e) =>
-            {
-                
-               
-            };
-
-            // フォームに追加
-            Controls.Add(clearButton);
+          
         }
 
-<<<<<<< HEAD
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-=======
+    
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + "2";
@@ -162,7 +147,7 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
->>>>>>> 524e4159f7eac05e926a3b5c42124ddcbe9910f6
+
         }
     }
 }

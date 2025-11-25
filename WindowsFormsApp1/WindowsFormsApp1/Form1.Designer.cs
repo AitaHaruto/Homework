@@ -255,12 +255,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1125, 844);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+   
             this.ClientSize = new System.Drawing.Size(947, 755);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.button18);
@@ -281,12 +276,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button0);
->>>>>>> 524e4159f7eac05e926a3b5c42124ddcbe9910f6
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+
 
         }
 
