@@ -12,46 +12,39 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public NumberButton[,] _numberArray;
-        public OperatorButton[] _operatorArray;
+        private bool state = true;
+        private string enzanshi;
+        private double num1;
+        private double num2;
+        
         public Form1()
+        { 
+          InitializeComponent();
+          
+          
+           
+           
+        }
 
+        private void button1_Click(object sender, EventArgs e)
         {
-            int count = 1;
-            InitializeComponent();
-            _numberArray = new NumberButton[4, 4];
-            _operatorArray = new OperatorButton[5];
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    NumberButton numberbutton = new NumberButton(this, new Size(100, 100), new Point(j * 100, i * 100 + 100), $"{count}", i, j, count);
-                    _numberArray[i, j] = numberbutton;
-                    Controls.Add(numberbutton);
-                    count++;
-                }
-            }
-            //"0"用.
-            NumberButton zero = new NumberButton(this, new Size(100, 100), new Point(100, 400), $"{0}", 3, 1, 0);
-            _numberArray[3, 1] = zero;
-            Controls.Add(zero);
+            textBox1.Text = textBox1.Text + "0";
+        }
 
-            //演算子ボタンの生成.
-            OperatorButton addition = new OperatorButton(this, new Size(100, 100), new Point(300, 100), "+", 0);
-            _operatorArray[0] = addition;
-            Controls.Add(addition);
-            OperatorButton subtraction = new OperatorButton(this, new Size(100, 100), new Point(300, 200), "-", 1);
-            _operatorArray[1] = subtraction;
-            Controls.Add(subtraction);
-            OperatorButton multiplication = new OperatorButton(this, new Size(100, 100), new Point(300, 300), "×", 2);
-            _operatorArray[2] = multiplication;
-            Controls.Add(multiplication);
-            OperatorButton division = new OperatorButton(this, new Size(100, 100), new Point(300, 400), "÷", 3);
-            _operatorArray[3] = division;
-            Controls.Add(division);
-            OperatorButton equal = new OperatorButton(this, new Size(100, 100), new Point(200, 400), "＝", 4);
-            _operatorArray[4] = equal;
-            Controls.Add(equal);
+       
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "3";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text+"1";
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
 
             // クリアボタンの生成
             Button clearButton = new Button();
@@ -68,9 +61,108 @@ namespace WindowsFormsApp1
             Controls.Add(clearButton);
         }
 
+<<<<<<< HEAD
         private void Form1_Load(object sender, EventArgs e)
         {
 
+=======
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "2";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "4";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "5";
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "6";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "7";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "8";
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "9";
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = null;
+        }
+
+        private void Plus(object sender, EventArgs e)
+        {
+            if (state == true)
+            {
+                state= !state;
+                num1 = Convert.ToDouble(textBox1.Text);
+                textBox2.Text = textBox1.Text+"+";
+                textBox1.Text = null;
+                enzanshi = "+";
+
+            }
+        }
+
+        private void Minus(object sender, EventArgs e)
+        {
+            state = !state;
+            num1 = Convert.ToDouble(textBox1.Text);
+            textBox2.Text = textBox1.Text+"-";
+            textBox1.Text = null;
+            enzanshi = "-";
+
+        }
+
+        private void Kakeru(object sender, EventArgs e)
+        {
+            state = !state;
+            num1 = Convert.ToDouble(textBox1.Text);
+            textBox2.Text = textBox1.Text+"×";
+            textBox1.Text = null;
+            enzanshi = "*";
+
+        }
+
+        private void Waru(object sender, EventArgs e)
+        {
+            state = !state;
+            num1 = Convert.ToDouble(textBox1.Text);
+            textBox2.Text = textBox1.Text+"÷";
+            textBox1.Text = null;
+            enzanshi = "/";
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+           
+            if (state == !state)
+            {
+                //ここに演算処理を書いてください。
+            }
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+>>>>>>> 524e4159f7eac05e926a3b5c42124ddcbe9910f6
         }
     }
 }

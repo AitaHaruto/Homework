@@ -9,36 +9,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public class OperatorButton:Button
+    public class OperatorButton : Button
     {
-        int state = 0;
-        private int _x;
-        private int _y;
-        private Form1 _form1;
-        private NumberButton _numberbutton;
-        public OperatorButton(Form1 form1, Size size, Point location, string text, int x)
-        {
-            _form1 = form1;
-            Size = size;
-            Location = location;
-            Text = text;
-            _x = x;
-            
-            Click += Operator_Click;
-        }
-        public void Addtion()
-        {
-            if (_form1._operatorArray[_x].Text == "+")
-            {
-                state = 1;
-            }
-        }
-        public void Subtraction()
-        {
-            if (_form1._operatorArray[_x].Text == "-")
-            {
-                state = 2;
 
+<<<<<<< HEAD
             }
         }
         public void Multiplication()
@@ -73,5 +47,7 @@ namespace WindowsFormsApp1
 
             
         }
+=======
+>>>>>>> 524e4159f7eac05e926a3b5c42124ddcbe9910f6
     }
 }
