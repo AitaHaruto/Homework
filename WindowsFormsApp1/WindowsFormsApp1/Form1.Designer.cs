@@ -255,7 +255,8 @@
             // 
             // Form1
             // 
-   
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 755);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.button18);
@@ -276,7 +277,10 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button0);
-
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
