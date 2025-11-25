@@ -20,7 +20,8 @@ x64/
 .vs/
 bin/
 obj/
-
+.json
+.db
 *_i.c
 *_p.c
 *_i.h
