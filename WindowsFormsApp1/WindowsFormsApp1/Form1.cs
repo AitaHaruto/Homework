@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
            
             if (state == !state)
             {
-                //ここに演算処理を書いてください。
+                //ここに演算処理を書いてください.
             }
 
         }
