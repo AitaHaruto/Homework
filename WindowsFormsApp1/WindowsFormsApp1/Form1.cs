@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -17,13 +18,10 @@ namespace WindowsFormsApp1
         private double num1;
         private double num2;
         
+        
         public Form1()
         { 
           InitializeComponent();
-          
-          
-           
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,11 +41,7 @@ namespace WindowsFormsApp1
             textBox1.Text = textBox1.Text+"1";
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + "2";
@@ -86,64 +80,140 @@ namespace WindowsFormsApp1
         private void Clear_Click(object sender, EventArgs e)
         {
             textBox1.Text = null;
+            textBox2.Text = null;
         }
 
         private void Plus(object sender, EventArgs e)
         {
-            if (state == true)
+            if (textBox1.Text != string.Empty)
             {
-                state= !state;
-                num1 = Convert.ToDouble(textBox1.Text);
-                textBox2.Text = textBox1.Text+"+";
-                textBox1.Text = null;
-                enzanshi = "+";
+                if (textBox1.Text != null)
+                {
 
+                    num1 = Convert.ToDouble(textBox1.Text);
+                    textBox2.Text = textBox1.Text + "+";
+                    textBox1.Text = null;
+                    enzanshi = "+";
+
+                }
             }
+
         }
 
         private void Minus(object sender, EventArgs e)
         {
-            state = !state;
-            num1 = Convert.ToDouble(textBox1.Text);
-            textBox2.Text = textBox1.Text+"-";
-            textBox1.Text = null;
-            enzanshi = "-";
+            if (textBox1.Text != string.Empty)
+            {
+                if (textBox1.Text != null)
+                {
+
+                    num1 = Convert.ToDouble(textBox1.Text);
+                    textBox2.Text = textBox1.Text + "-";
+                    textBox1.Text = null;
+                    enzanshi = "-";
+                }
+            }
+           
 
         }
 
         private void Kakeru(object sender, EventArgs e)
         {
-            state = !state;
-            num1 = Convert.ToDouble(textBox1.Text);
-            textBox2.Text = textBox1.Text+"×";
-            textBox1.Text = null;
-            enzanshi = "*";
+            if (textBox1.Text != string.Empty)
+            {
+                if (textBox1.Text != null)
+                {
+                    num1 = Convert.ToDouble(textBox1.Text);
+                    textBox2.Text = textBox1.Text + "×";
+                    textBox1.Text = null;
+                    enzanshi = "*";
+                }
+            }
+            
+            
 
         }
 
         private void Waru(object sender, EventArgs e)
         {
-            state = !state;
-            num1 = Convert.ToDouble(textBox1.Text);
-            textBox2.Text = textBox1.Text+"÷";
-            textBox1.Text = null;
-            enzanshi = "/";
+            if (textBox1.Text != string.Empty)
+            {
+                if (textBox1.Text != null)
+                {
+                    num1 = Convert.ToDouble(textBox1.Text);
+                    textBox2.Text = textBox1.Text + "÷";
+                    textBox1.Text = null;
+                    enzanshi = "/";
+                }
+            }
+            
 
+
+        }
+        private void dott_Click(object sender, EventArgs e)
+        {
+            if (!textBox1.Text.Contains (".") )
+            {
+                textBox1.Text = textBox1.Text + ".";
+            }
+            
+        }
+
+        private void Backspace(object sender, EventArgs e)
+        {
+            if (textBox1.Text != string.Empty)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+
+            }
+            
+        }
+        private void Shisokuenzan()
+        {
+
+                //ここに演算処理を書いてください.
+                num2 = Convert.ToDouble(textBox1.Text);
+                if (enzanshi == "+")
+                {
+                    textBox1.Text = Convert.ToString(num1 + num2);
+                    textBox2.Text = null;
+
+                }
+                else if (enzanshi == "-")
+                {
+                    textBox1.Text = Convert.ToString(num1 - num2);
+                    textBox2.Text = null;
+                }
+                else if (enzanshi == "*")
+                {
+                    textBox1.Text = Convert.ToString(num1 * num2);
+                    textBox2.Text = null;
+                }
+                else if (enzanshi == "/")
+                {
+                    textBox1.Text = Convert.ToString(num1 / num2);
+                    textBox2.Text = null;
+                }
+                
+            
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
+            Shisokuenzan();
            
-            if (state == !state)
-            {
-                //ここに演算処理を書いてください.
-            }
 
+        }
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

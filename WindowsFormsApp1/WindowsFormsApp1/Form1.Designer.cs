@@ -47,6 +47,8 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
+            this.dott = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button0
@@ -253,11 +255,35 @@
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
+            // dott
+            // 
+            this.dott.Font = new System.Drawing.Font("MS UI Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dott.Location = new System.Drawing.Point(111, 524);
+            this.dott.Name = "dott";
+            this.dott.Size = new System.Drawing.Size(75, 75);
+            this.dott.TabIndex = 21;
+            this.dott.Text = ".";
+            this.dott.UseVisualStyleBackColor = true;
+            this.dott.Click += new System.EventHandler(this.dott_Click);
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("MS UI Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button10.Location = new System.Drawing.Point(111, 200);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 75);
+            this.button10.TabIndex = 22;
+            this.button10.Text = "▶";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.Backspace);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 755);
+            this.ClientSize = new System.Drawing.Size(400, 640);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.dott);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -305,6 +331,8 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button dott;
+        private System.Windows.Forms.Button button10;
     }
 }
 
